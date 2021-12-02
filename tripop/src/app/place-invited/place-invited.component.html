@@ -1,0 +1,43 @@
+
+<body dir="rtl">
+
+  <mat-spinner *ngIf="flag && !ch" id="spiner"></mat-spinner>
+
+  <div *ngIf="ch" style="position:absolute;width: 40vw;top: 30vh;border-style: solid;border-color: #F12750;width:20vw;height:15vh;display: inline-block;right:35vw; ">
+    אין מספיק מקומות עבור כל המוזמנים 
+    <button mat-button (click)="invited()">לעמוד המוזמנים</button>
+    </div>
+    <span *ngIf="messageSuccess" style="border-style: solid;border-color:darkgray;border-width:1px;width:20vw;height: 20vh;position: absolute;background-color:white;top: 0vh; ">
+
+      <button mat-raised-button value="x" [color]="color" 
+      (click)="close()" style="left:15vw;top:3vh;position: absolute;" >x</button>
+    <h4 style="right:9vw;position: absolute;"> האם לשמור שינויים?</h4>
+      <button mat-button (click)="Save()" style="margin-left:8vw;position: absolute;top: 12vh;right:6.5vw;">Save</button>
+      <button mat-button (click)="Repeat()"  style="margin-left:5vw;position: absolute;top: 12vh;right:12vw;">Repeat</button>
+    </span>
+
+
+  <button *ngIf="!flag" mat-button (click)="change()"  style="margin-top:5vh;background-color: #F12750;margin-right:83vw;position: absolute;top:9vh;" >אשר החלפה</button>
+  <button *ngIf="!flag" mat-button (click)="mm()"  style="margin-top:5vh;background-color: #F12750;margin-right:90vw;position: absolute;top:9vh;" >ערוך</button>
+
+
+  <ul [style.left]="item.point.x+'px'" [style.margin-top]="item.point.y+'px'" *ngFor="let item of arr" style="position: absolute;" > שולחן מספר:{{item.num_table}}
+    <div style="border-color:#F12750 ;border-width: 2px;border-style: solid;width:9vw;height:25vh;">
+      <li (click)="chng(item1)" *ngFor ="let item1 of item.listfinally" style="font-size: small;">מספר כסא:{{item1.num_place}} שם: {{item1.name_invite}}</li>
+      </div>
+  </ul>
+
+  <div style="width:10.5vw;height:20vh;position: absolute;background-color: #F12750;"[style.left]="area[0].x+'px'" [style.margin-top]="area[0].y+'px'" *ngIf="area[0]&&!flag">רחבת ריקודים</div>
+  <div style="width:10.5vw;height:20vh;position: absolute;background-color: #F12750;"[style.left]="area[1].x+'px'" [style.margin-top]="area[1].y+'px'" *ngIf="area[1]&&!flag" >רחבת ריקודים</div>
+  <img  style="width:10.5vw;height:10vh;position: absolute;background-color: #F12750;z-index:10;"[style.left]="area[2].x+'px'" [style.margin-top]="area[2].y+'px'" *ngIf="area[2]&&!flag" src=".\assets\צילום מסך 2021-07-09 120218.png">
+  <div style="width:6vw;height:10vh;position: absolute;background-color: #F12750;"[style.left]="area[3].x+'px'" [style.margin-top]="area[3].y+'px'" *ngIf="area[3]&&!flag" >כניסה</div>
+  <div style="width:6vw;height:10vh;position: absolute;background-color: #F12750;"[style.left]="area[4].x+'px'" [style.margin-top]="area[4].y+'px'" *ngIf="area[4]&&!flag" >כניסה</div>
+
+
+
+  <div *ngIf="!flag" class="example-box4" ></div> 
+  <h1 *ngIf="!flag" style="left:50vw;margin-top:12vh;">נשים</h1>
+  <h1 *ngIf="!flag" style="left:15vw;margin-top:-8vh;position: absolute;">גברים</h1>
+
+</body>
+

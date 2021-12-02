@@ -1,0 +1,50 @@
+
+<table style="margin-top:12vh;position:absolute;width:85vw;"border="1">
+  <tr style="width:3vw;height:3vh;"  *ngFor="let item of func(22)">
+  <td  style="width:3vw;height:3vh;" *ngFor="let item of func(40)"></td>
+  </tr>
+</table>
+
+
+<button  mat-button  (click)="save()"  style="position: absolute;background-color: #F12750;top:15vh;" >שמור מפת אולם </button>
+
+<h1  style="margin-left:70vw;margin-top:12vh;">נשים</h1>
+<h1  style="margin-left:11vw;margin-top:-8vh;">גברים</h1>
+<div class="example-box" id="table1" cdkDrag (cdkDragEnded)="onDragEnded($event)" >12 מקומות</div>
+<div class="example-box" id="table2" cdkDrag (cdkDragEnded)="onDragEnded($event)" >12 מקומות</div>
+<div class="example-box" id="table3" cdkDrag (cdkDragEnded)="onDragEnded($event)" >12 מקומות</div>
+<div class="example-box" id="table4" cdkDrag (cdkDragEnded)="onDragEnded($event)" >12 מקומות</div>
+<div class="example-box" id="table5" cdkDrag  (cdkDragEnded)="onDragEnded($event)" >12 מקומות</div>
+<div class="example-box" id="table6"cdkDrag (cdkDragEnded)="onDragEnded($event)" >12 מקומות</div>
+<div class="example-box" id="table7"cdkDrag (cdkDragEnded)="onDragEnded($event)" >12 מקומות</div>
+<div class="example-box" id="table8"cdkDrag (cdkDragEnded)="onDragEnded($event)" >12 מקומות</div>
+<div class="example-box" id="table9" cdkDrag (cdkDragEnded)="onDragEnded($event)" >12 מקומות</div>
+<div class="example-box" id="table10" cdkDrag (cdkDragEnded)="onDragEnded($event)" >12 מקומות</div>
+<div class="example-box" id="table11" cdkDrag (cdkDragEnded)="onDragEnded($event)" >12 מקומות</div>
+<div class="example-box" id="table12" cdkDrag (cdkDragEnded)="onDragEnded($event)" >12 מקומות</div>
+<div class="example-box" id="table13"cdkDrag (cdkDragEnded)="onDragEnded($event)" >12 מקומות</div>
+<div class="example-box" id="table14"cdkDrag (cdkDragEnded)="onDragEnded($event)" >12 מקומות</div>
+<div class="example-box" id="table15"cdkDrag (cdkDragEnded)="onDragEnded($event)" >12 מקומות</div>
+<div class="example-box" id="table16"cdkDrag (cdkDragEnded)="onDragEnded($event)" >12 מקומות</div>
+
+<div class="example-box5" id="honer"cdkDrag (cdkDragEnded)="onDragEnded($event)" >שולחן כבוד-גברים</div>
+
+
+
+<img class="example-box1" id="3" cdkDrag (cdkDragEnded)="onDragEnded($event)" src=".\assets\צילום מסך 2021-07-09 120218.png">
+
+<div class="example-box2" id="5" cdkDrag (cdkDragEnded)="onDragEnded($event)" > נשים כניסה</div>
+<div class="example-box2" id="4" cdkDrag (cdkDragEnded)="onDragEnded($event)" >גברים כניסה</div>
+
+<div class="example-box3" id="1" cdkDrag (cdkDragEnded)="onDragEnded($event)" >רחבת ריקודים נשים</div>
+<div class="example-box3" id="2" cdkDrag (cdkDragEnded)="onDragEnded($event)" >רחבת ריקודים גברים</div>
+
+ <div class="example-box4" ></div> 
+
+
+<div *ngIf="table" style="top:40vh;position: absolute;background-color: whitesmoke;width:11.5vw;height: 20vh;left:40vw;z-index: 10;">
+  <input  type="number"  [(ngModel)]="access" style="width: 3vw;margin-top: 8vh;margin-left:4vw;position: absolute;">
+  <button  mat-button  (click)="addTable()"  style="position: absolute;margin-top:15vh;" >אישור </button>
+  <h5>:מספר מקומות נגישים בשולחן זה</h5>
+  <img style="position: absolute;margin-top:4.5vh;margin-left:8vw;" src=".\assets\נכה.png">
+  </div>

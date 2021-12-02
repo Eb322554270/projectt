@@ -1,0 +1,16 @@
+
+<body dir="rtl">
+  <img style="width:99.5vw;height: 40vh; margin-top:12vh;position: absolute;" src=".\assets\תמונה.PNG">
+
+<h1 style="position: absolute;"> ברוכה הבאה ל {{this.db.currentcustomer.fname_customer}}    {{this.db.currentcustomer.lname_customer}}</h1>
+<div *ngIf="arr3" >
+  <span   style="left: 40vw;top:70vh;position: absolute;">
+  <ul>
+    <p >בחר קוד אירוע מהרשימה שלהלן</p>
+      <li *ngFor="let item1 of arr3" (click)="save_num_event(item1)" style="cursor:pointer"><a>{{item1.id_event}}</a> </li>
+  </ul>
+</span>
+</div>
+
+<img style="width:12vw;height:10vh; margin-left:80vw;margin-top:58vh;" (click)="addnewevent()" src=".\assets\אירועחדש.png">
+</body>

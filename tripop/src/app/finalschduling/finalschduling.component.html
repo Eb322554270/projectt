@@ -1,0 +1,9 @@
+<body dir="rtl"  (click)="change1()">
+  <div *ngIf="finallarr">
+  <table border="1"  style="margin-top:20vh;margin-right: 20vw;width:60vw;height: 50vh;  position: absolute;">
+    <tr  *ngFor="let item of finallarr"> שולחן מספר:{{item.num_table}} 
+      <td *ngFor ="let item1 of item.listfinally"   >מספר כסא:{{item1.num_place}} שם: {{item1.name_invite}}</td>
+    </tr>
+    </table>
+  </div>
+</body>

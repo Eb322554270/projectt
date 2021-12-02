@@ -1,0 +1,25 @@
+
+  <div id="entt">
+    <mat-form-field appearance="fill" style="width:17vw;
+    height:13vh;">
+      <mat-label>Enter your Email</mat-label>
+      <input matInput type="text"  [(ngModel)]="temp.email"      >
+      <span matPrefix>&nbsp;</span>
+    </mat-form-field><br>
+
+    <mat-form-field appearance="fill"  style="width:17vw;
+    height:10vh;">
+      <mat-label>Enter your password</mat-label>
+      <input  matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="temp.password"  >
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon></mat-icon>
+      </button>
+    </mat-form-field>
+</div> 
+<button  mat-button  (click)="check()"  style="left:41vw;position: absolute;background-color: #F12750;" >הבא-></button>
+<a routerLink="newuser" style="left:53vw; top:56vh;position: absolute;color: #F12750; ">משתמש חדש</a>
+
+<router-outlet></router-outlet>
+
+
+

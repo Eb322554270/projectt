@@ -1,0 +1,14 @@
+<div>
+<img (click)="home()" style="position: absolute;margin-top:5vh; margin-left:6vw;" src=".\assets\mylogo.png">
+  <nav mat-tab-nav-bar [backgroundColor]="background" style="top:12vh;">
+    <a mat-tab-link routerLink="about" style="left:40vh;font-size:large;"(click)="about()" >שאלות נפוצות</a>
+    <a mat-tab-link   style="left:42vh;font-size:large;">כניסה<button mat-button [matMenuTriggerFor]="menu">v</button></a>
+    <mat-menu #menu="matMenu">
+      <button  mat-menu-item><a disabled={{db.disable}} mat-tab-link routerLink="entry" (click)="LogIn()" >Log In</a></button>
+      <button mat-menu-item><a disabled= {{!db.disable}} mat-tab-link routerLink="pagehome" (click)="LogOut()" >Log Out</a></button>
+    </mat-menu>
+    <a mat-tab-link routerLink="pagehome" style="left:44vh;font-size:large;"  >דף הבית</a>
+  </nav>
+<router-outlet></router-outlet>
+</div>
+<app-pagehome *ngIf="db.flag"></app-pagehome>

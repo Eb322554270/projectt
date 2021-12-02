@@ -1,0 +1,50 @@
+#spiner{
+    width:20px;
+    height:20px;
+    margin-right:50vw;
+    margin-top:35vh;
+
+}
+
+
+[mat-raised-button]:hover {
+    color: black;
+    background-color: rgb(214, 14, 14);
+  }
+  [mat-raised-button]:not(:hover) {
+    color: black;
+    background-color: rgb(238, 234, 234);
+  }
+
+  
+  tr:nth-child(even) {
+    background-color: rgb(252, 252, 252);
+  }
+  tr:nth-child(odd) {
+    background-color: darkgray
+   }
+
+   .example-box4 {
+    left: 665px;
+    top:20vh;
+    width:25px;
+    height:82vh;
+    position:absolute;
+    border: solid 1px #ccc;
+    color: rgba(0, 0, 0, 0.87);
+    cursor: move;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+      border-radius: 4px; 
+     z-index:2; 
+    transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+                0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
+    
+    background-color:#F12750;            
+  } 

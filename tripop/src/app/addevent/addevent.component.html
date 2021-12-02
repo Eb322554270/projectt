@@ -1,0 +1,42 @@
+
+  <div style="border-style:solid ;border-width :1.5px;border-color:#F12750 ;  width:45vw;height:65vh;margin-top:17vh;margin-left:23vw;" >
+    <div style="position: absolute;width:15vw;height:25vh;margin-left:5vw;margin-top: 20vh;">
+      <h1 style="margin-left:4vw;">הוספת אירוע </h1>
+      <h1 style="margin-left:7vw;"> חדש</h1>
+    </div>
+    <mat-form-field appearance="fill"  style="left:30vw;top:18vh;">
+      <mat-label>הכנס כמות מוזמנים </mat-label>
+      <input matInput placeholder="num invited" [(ngModel)]="a.num_Invited"[formControl]="call3" required>
+      <mat-error *ngIf="call3.invalid">{{getErrorMessage3()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="left:21vw;top:33vh;">
+      <mat-label>בחר סוג אירוע</mat-label>
+      <mat-select [(value)]="selected"[(ngModel)]="a.id_TypeEvent">
+        <mat-option>  </mat-option>  
+        <mat-option value=1>אירוע בעל 2 צדדי מוזמנים</mat-option>
+        <mat-option value=2>אירוע בעל צד מוזמנים אחד</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="left:12vw;top:48vh;">
+     <mat-label> תאריך האירוע </mat-label>
+     <input matInput type="date"  [(ngModel)]="a.date_event"     >
+   </mat-form-field><br>
+
+   <button  mat-button  (click)="addEvent()"  style=" left:48vw;top:81vh ;width:4vw;height:4vh;position: absolute;background-color: #F12750;" >הרשם</button>
+
+   </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+  

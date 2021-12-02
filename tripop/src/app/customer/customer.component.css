@@ -1,0 +1,34 @@
+#img1:hover{
+    width:5vw;
+
+}
+#img1:not(:hover){
+    width: auto;
+}
+
+#img2:hover{
+    width:7vw;
+}
+#img2:not(:hover){
+    width: auto;
+}
+
+#img3:hover{
+    width:6.5vw;
+}
+#img3:not(:hover){
+    width: auto;
+}
+
+#img4:hover{
+    width:5.5vw;
+}
+#img4:not(:hover){
+    width: auto;
+}
+#img5:hover{
+    width:6vw;
+}
+#img5:not(:hover){
+    width: auto;
+}

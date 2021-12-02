@@ -1,0 +1,26 @@
+
+ .example-container .mat-form-field + .mat-form-field {
+    margin-left: 150px;
+  
+  } 
+  
+   .example-right-align {
+    text-align: right;
+  } 
+   
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }  
+
+  #entt{
+   margin-left: 40vw;
+   margin-top: 22vh;
+   width: 25vw;
+   height:25vh;
+  }
+

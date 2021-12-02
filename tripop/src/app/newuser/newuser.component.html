@@ -1,0 +1,73 @@
+
+  <div style="border-style:solid ;border-width: 1.5px;border-color: #F12750;   width:50vw;height:70vh;margin-top:15vh;margin-left:23vw;" >
+    
+      <div style="position: absolute;width:15vw;height:25vh;margin-left:5vw;margin-top: 20vh;">
+        <h1 style="margin-left:4vw;">הוספת לקוח </h1>
+        <h1 style="margin-left:7vw;"> חדש</h1>
+      </div>
+
+    <mat-form-field appearance="fill" style="left:40vw;top:20vh;">
+      <mat-label>הכנס שם פרטי </mat-label>
+      <input matInput type="text"  [(ngModel)]="a.fname_customer"     >
+    </mat-form-field>
+
+  <mat-form-field appearance="fill" style="left:19vw;top:20vh;">
+     <mat-label>הכנס שם משפחה </mat-label>
+     <input matInput type="text"  [(ngModel)]="a.lname_customer"     >
+  </mat-form-field><br>
+
+   <mat-form-field appearance="fill" style="left:40vw;top:28vh;">
+     <mat-label>הכנס טלפון </mat-label>
+     <input matInput placeholder="054-8400000" [(ngModel)]="a.phone_customer" [formControl]="call1" required>
+     <mat-error *ngIf="call1.invalid">{{getErrorMessage1()}}</mat-error>
+   </mat-form-field>
+
+      <mat-form-field appearance="fill" style="left:19vw;top:28vh;">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" [formControl]="email" required   [(ngModel)]="a.email_customer">
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field><br>
+
+
+
+   <mat-form-field appearance="fill" style="left:40vw;top:36vh;">
+    <mat-label>הכנס סיסמא  </mat-label>
+    <input matInput placeholder="Enter 8 Characters" [(ngModel)]="a.password_customer"[formControl]="call2" required>
+    <mat-error *ngIf="call2.invalid">{{getErrorMessage2()}}</mat-error>
+  </mat-form-field>
+
+
+
+
+
+
+  <mat-form-field appearance="fill" style="left:19vw;top:36vh;">
+   <mat-label>אשר סיסמא </mat-label>
+   <!-- <input matInput type="sring" class="example-right-align"> -->
+   <!-- <input matInput type="text"     > -->
+   
+   <input matInput placeholder="Enter 8 Characters" [(ngModel)]="c"[formControl]="call3" required>
+   <mat-error *ngIf="call3.invalid">{{getErrorMessage3()}}</mat-error>
+
+ </mat-form-field><br> 
+ <!-- <input type="button" style=" left:52vw;top:81vh ;width:4vw;height:4vh;position: absolute;color: deeppurple-amber;" value="הרשם" (click)="addcustomer()" >
+  -->
+  </div>
+
+
+
+ <!-- <div class="example-ripple-container mat-elevation-z4" style=" left:52vw;top:81vh ;width:4vw;height:4vh;position: absolute;color: deeppurple-amber;" (click)="addcustomer()" -->
+     <!-- matRipple> -->
+    
+      <!-- [matRippleCentered]="centered"
+     [matRippleDisabled]="disabled"
+     [matRippleUnbounded]="unbounded"
+     [matRippleRadius]="radius"
+     [matRippleColor]="color" -->
+  
+     <!-- <h4 style="margin-left:1vw;margin-top:1vh; color:darkslateblue"  >הרשם</h4> -->
+     <button  mat-button linear (click)="addcustomer()"  style=" left:52vw;top:81vh ;width:4vw;height:4vh;position: absolute; background-color: #F12750;" >הרשם</button>
+
+
+
+   <!-- </div> -->

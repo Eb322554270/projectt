@@ -1,0 +1,38 @@
+
+<body dir="rtl">
+<h1  style="margin-right: 40vw;"> עדכון פרטי מוזמן</h1>
+<div  style="border-style: solid;border-color: #F12750;border-width:1.5px;margin-right: 40vw;display: inline-block;width: 20vw;height:60vh;margin-left: 40vw;margin-top:15vh;">
+<mat-form-field class="example-form-field"  style="margin-right:3vw;">
+  <mat-label>שם פרטי מוזמן</mat-label>
+  <input matInput type="text" [(ngModel)]="a.fname_Invited" >
+  <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+    <mat-icon>x</mat-icon>
+  </button>
+</mat-form-field><br><br>
+
+<mat-form-field class="example-form-field" style="margin-right:3vw;">
+  <mat-label>שם משפחה מוזמן</mat-label>
+  <input matInput type="text" [(ngModel)]="a.lname_Invited">
+  <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+    <mat-icon>x</mat-icon>
+  </button>
+</mat-form-field><br><br>
+
+<mat-form-field class="example-form-field" style="margin-right:3vw;">
+  <mat-label>אימייל מוזמן</mat-label>
+  <input matInput type="text" [(ngModel)]="a.email_Invited">
+  <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+    <mat-icon>x</mat-icon>
+  </button>
+</mat-form-field><br><br>
+
+<mat-form-field class="example-form-field" style="margin-right:3vw;">
+  <mat-label>סיסמא של המוזמן</mat-label>
+  <input matInput type="text" [(ngModel)]="a. password_Invited" >
+  <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+  <mat-icon>x</mat-icon>
+  </button>
+</mat-form-field>
+<button  mat-button linear (click)="addInvitedd()"style=" margin-top:15vh;left:36vw; width:4vw;height:4vh;position: absolute; background-color: #F12750;" >שמור</button>
+</div>
+</body>

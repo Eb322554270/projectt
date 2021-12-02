@@ -1,0 +1,99 @@
+<p style="color: white;">
+  constraints works!
+</p>
+
+
+
+<mat-horizontal-stepper labelPosition="bottom" #stepper>
+
+ <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>אשר הגעה:</ng-template>
+        <mat-radio-group aria-label="Select an option"   >
+          <mat-radio-button value="1" (change)="val(1)" >לא אגיע</mat-radio-button>
+          <mat-radio-button value="2" (change)="val(2)" >אגיע</mat-radio-button>
+        </mat-radio-group>
+      <div>
+        <button mat-button matStepperNext (click)=" if_no_come()"      >Next</button>
+      </div>
+    </form>
+  </mat-step>
+ 
+  <div  *ngIf="con">
+  <mat-step [stepControl]="secondFormGroup" optional >
+    <form [formGroup]="secondFormGroup" >
+      
+      <ng-template matStepLabel>בחר אילוצים</ng-template>
+      <ul>
+<li>
+<mat-form-field appearance="fill" style="width:10vw;">
+  <mat-label> מין</mat-label>
+  <mat-select [(value)]="selected"  [formControl]="call3" required>
+    <mat-option> None </mat-option>
+    <mat-option *ngFor="let item2 of arr3"[value]="item2.id_Constraints"(click)="add_Constraints(item2.id_Constraints)">{{item2.name_Constraints}}</mat-option>
+
+  </mat-select>
+  <mat-error *ngIf="call3.invalid">{{getErrorMessage3()}}</mat-error>
+
+</mat-form-field>
+</li>
+
+
+        <li *ngFor="let item of arr4"  (click)="add_Constraints(item.id_Constraints)"><a>{{item.name_Constraints}}</a></li>
+        
+        <li >קרבת משפחה: 
+    
+        <mat-form-field appearance="fill" style="width:10vw;">
+          <mat-label> קרבת משפחה</mat-label>
+          <mat-select [(value)]="selected">
+            <mat-option> None </mat-option>
+            <mat-option *ngFor="let item1 of arr2"[value]="item1.id_Constraints"(click)="add_Constraints(item1.id_Constraints)">{{item1.name_Constraints}}</mat-option>
+        
+          </mat-select>
+        </mat-form-field>
+        
+    </li>
+      
+
+      </ul> 
+
+      <div>
+        <button mat-button matStepperPrevious >Back</button>
+        <button *ngIf="flag" #next mat-button matStepperNext (click)="enterconstraints()">Next </button>
+      </div>
+
+    </form>
+  </mat-step>
+</div>
+
+
+  <mat-step>
+    <ng-template matStepLabel>אישור</ng-template>
+    <p>הפרטים נקלטו בהצלחה</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
+
+
+
+<span *ngIf="choose" style="margin-left:55vw;top:35vh;position:absolute;border-style:solid;border-color: black;border-width: 2px;width: 40vw;height: 20vh;">
+
+ 
+  <mat-radio-group aria-label="Select an option">
+     <mat-radio-button value="3" id="3" (change)="level(3)"><pre>             </pre></mat-radio-button>  
+      <mat-radio-button value="2" id="2" (change)="level(2)" ><pre>          </pre></mat-radio-button>  
+      <mat-radio-button value="1" id="1" (change)="level(1)"><pre>          </pre></mat-radio-button><br>  
+      </mat-radio-group>
+      <pre><p>עדיף- 1                 2           חשוב מאוד-3</p></pre> 
+
+   <button mat-raised-button value="x" [color]="color" 
+   (click)="close()" style="left: 35.5vw;top:1vh;position: absolute;" >x</button>
+</span>
+
+<div>
+
+</div>
+

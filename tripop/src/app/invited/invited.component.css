@@ -1,0 +1,24 @@
+.example-form {
+    min-width: 150px;
+    max-width: 200px;
+    width: 100%;
+    
+    left:80vw;
+    position: absolute;
+    top: 10vh;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  [mat-raised-button]:hover {
+    color: black;
+    background-color: rgb(214, 14, 14);
+  }
+  [mat-raised-button]:not(:hover) {
+    color: black;
+    background-color: rgb(238, 234, 234);
+  }
+
+ 

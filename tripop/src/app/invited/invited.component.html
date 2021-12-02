@@ -1,0 +1,73 @@
+<body dir="rtl">
+<div *ngIf="cn">
+ <div *ngIf="c.length" style="border-style: solid;border-color: black;border-width: 2px;left:5vw;top:35vh; position: absolute;width: 20vw;height: 15vh;">
+  <p style="margin-right:8vw;"><b> <u>אילוצי המוזמן </u> </b></p>
+  <ul>
+    <li *ngFor="let item1 of c" >{{item1.name}}   {{item1.prio}}</li>
+    <!-- {{item1.id_InvitedConstraints}}     {{item1.id_Constraints}}  {{item1.id_importance}} -->
+</ul>
+<button mat-raised-button value="x" [color]="color" 
+(click)="close()" style="margin-left:15vw;top:1vh;position: absolute;width:2px;" >x</button>
+</div>
+ </div>
+ 
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label><img src=".\assets\זכוכית מגדלת.png"></mat-label>
+        <input type="text"
+               placeholder="חפש"
+               aria-label="חיפוש מוזמן"
+               matInput
+               [formControl]="myControl"
+               [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option" >
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+
+<img style="width:12vw;height:10vh; margin-right:20vw;margin-top:12vh;" (click)="addinvited()" src=".\assets\מוזמןחדש.png">
+
+<table border="1" style="top:27vh;margin-right: 20vw;width: 50vw;">
+<tr >
+<td style="background-color: #F12750 ;">
+  שם מוזמן
+</td>
+<td style="background-color: #F12750 ;">
+  קוד מוזמן 
+</td>
+<td style="background-color: #F12750 ;">
+  מייל מוזמן
+</td>
+<td style="background-color: #F12750 ;">
+האם אישר הגעה
+</td>
+<td style="background-color: #F12750 ;">
+</td>
+<td style="background-color: #F12750 ;">
+</td>
+ </tr>
+
+
+<tr *ngFor="let item of arr2"><td id="invited" (click)="get_constraints(item.id_Invited)">{{item.fname_Invited}} {{item.lname_Invited}}</td>
+  <td>{{item.id_Invited}}</td>
+  <td>{{item.email_Invited}}</td>
+  <td *ngIf="item.confirm_Invited"> V</td> 
+  <td *ngIf="!item.confirm_Invited"> X</td> 
+
+  <td><img id="gar" (click)="check(item.id_Invited)" src=".\assets\פח.png"></td>
+  <td><img (click)="openDialog(item)" src=".\assets\עריכה.png"></td>
+</tr>
+</table>
+
+  <span *ngIf="messageSuccess" style="border-style: solid;border-color:black;border-width:1px;width:20vw;height: 20vh;position: absolute; left: 40vw;bottom:30vh;background-color: whitesmoke;">
+
+  <p style="margin-right: 5vw;">האם למחוק לצמיתות?</p> 
+    <button mat-button (click)="DeleteInvited(idd)" style="margin-top:8vh;margin-right:6vw;">Delete</button>
+    <button mat-button (click)="close()">Cancel</button>
+  </span>
+  
+  </body>
+
